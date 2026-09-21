@@ -50,7 +50,7 @@ echo title AIVANA Sovereign Gateway Runner
 echo cd /d C:\AivanaGateway
 echo start "AIVANA Python Gateway" "%PYBIN%" gateway.py
 echo timeout /t 3 /nobreak ^^>nul
-echo C:\AivanaGateway\cloudflared.exe tunnel --url http://127.0.0.1:8050
+echo C:\AivanaGateway\cloudflared.exe tunnel --url http://127.0.0.1:8050 --protocol http2
 echo pause
 ) > "%USERPROFILE%\Desktop\START_AIVANA_GATEWAY.bat"
 
@@ -61,5 +61,5 @@ echo ===================================================
 echo.
 start "AIVANA Python Gateway" "%PYBIN%" gateway.py
 timeout /t 3 /nobreak >nul
-C:\AivanaGateway\cloudflared.exe tunnel --url http://127.0.0.1:8050
+C:\AivanaGateway\cloudflared.exe tunnel --url http://127.0.0.1:8050 --protocol http2
 pause
